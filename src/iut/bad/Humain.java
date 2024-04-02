@@ -9,6 +9,7 @@ public class Humain implements Consommation {
 	protected String prenom;
 	protected int age;
 	public List<Humain> amis;
+	protected int duree = 100;
 	
 	
 	public Humain()
@@ -36,11 +37,12 @@ public class Humain implements Consommation {
 	{
 		System.out.println("Je bois");
 	}
-	public void ami(Humain autre)
+	public void ami(Humain autre, int duree)
 	{
+		this.duree= duree;
 		this.amis.add(autre);
 		autre.amis.add(this);
 		
-		System.out.println(this.prenom+" et "+autre.prenom+" sont amis");
+		System.out.println(this.prenom+" et "+autre.prenom+" sont amis pendant "+duree+" jours");
 	}
 }

@@ -15,7 +15,7 @@ public Femme() {};
 public static void main(String[] args) {
 	Homme Sylvio = new Homme("Hayler","Sylvio",10);
 	Femme Nina = new Femme("Nina","Dobrev",12);
-	Sylvio.ami(Nina);
+	Sylvio.ami(Nina, 130);
 }
 
 }
