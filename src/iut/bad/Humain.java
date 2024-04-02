@@ -8,7 +8,13 @@ public class Humain {
 	
 	public void details()
 	{
-		System.out.println("Nom "+nom+" Prenom "+prenom+" et age"+age);
+		System.out.println(toString());
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Nom : "+nom+" Prenom : "+prenom+" Age :"+age;
 	}
 
 }
