@@ -1,5 +1,6 @@
 package iut.bad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Humain implements Consommation {
@@ -9,6 +10,11 @@ public class Humain implements Consommation {
 	protected int age;
 	public List<Humain> amis;
 	
+	
+	public Humain()
+	{
+		this.amis= new ArrayList<>();
+	}
 	public void details()
 	{
 		System.out.println(toString());
@@ -35,6 +41,6 @@ public class Humain implements Consommation {
 		this.amis.add(autre);
 		autre.amis.add(this);
 		
-		System.out.println("ils sont amis maintenant");
+		System.out.println(this.prenom+" et "+autre.prenom+" sont amis");
 	}
 }
