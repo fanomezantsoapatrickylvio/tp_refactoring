@@ -1,10 +1,13 @@
 package iut.bad;
 
+import java.util.List;
+
 public class Humain implements Consommation {
 
 	protected String nom;
 	protected String prenom;
-	protected int age; 
+	protected int age;
+	public List<Humain> amis;
 	
 	public void details()
 	{
@@ -26,5 +29,12 @@ public class Humain implements Consommation {
 	public void boire()
 	{
 		System.out.println("Je bois");
+	}
+	public void ami(Humain autre)
+	{
+		this.amis.add(autre);
+		autre.amis.add(this);
+		
+		System.out.println("ils sont amis maintenant");
 	}
 }

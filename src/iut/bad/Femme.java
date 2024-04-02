@@ -10,5 +10,7 @@ public class Femme extends Humain{
 		this.prenom=prenom;
 		this.age=age;
 	}
+public Femme() {};
+
 
 }
